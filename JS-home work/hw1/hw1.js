@@ -40,7 +40,7 @@ console.log(person);
 let a = 100;
 let b = '100';
 let c = true;
-console.log(a,b,c);
+console.log(typeof a,b,c);
 
 // -----additional task------ За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками. та вивести в консоль
 let name = prompt('Enter your name','Artem');
