@@ -43,9 +43,9 @@ let c = true;
 console.log(a,b,c);
 
 // -----additional task------ За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками. та вивести в консоль
-let Name = prompt('Enter your name','Artem');
-console.log(Name);
-let LastName = prompt('Enter your LastName','Ivanovich');
-console.log(LastName);
-let year = prompt('Enter your year of birth','30-08-1996');
+let name = prompt('Enter your name','Artem');
+console.log(name);
+let lastName1 = prompt('Enter your LastName','Ivanovich');
+console.log(lastName1);
+let year = +prompt('Enter your year of birth','30-08-1996');
 console.log(year);
