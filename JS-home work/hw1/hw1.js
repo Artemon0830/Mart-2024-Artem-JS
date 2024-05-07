@@ -49,3 +49,4 @@ let lastName1 = prompt('Enter your LastName','Ivanovich');
 console.log(lastName1);
 let year = +prompt('Enter your year of birth','30-08-1996');
 console.log(year);
+

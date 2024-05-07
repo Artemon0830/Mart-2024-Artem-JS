@@ -25,33 +25,33 @@ let books = {
     title:'Love and War in the Apennines',
     pageCount: 320,
     genre:'Historical',
-    authors :{
-        name : 'Eric Newby',
-        age: 86,
-}
+    authors :[
+        {name : 'Eric Newby',
+        age: 86}
+]
 };
 let books2 = {
     title:'A Marvelous Life: The Amazing Story of Stan Lee',
     pageCount:400,
     genre:'comic books',
-    authors :{
-    name :'Danny Fingeroth',
-    age:55,
-    }
+    authors :[
+        {name :'Danny Fingeroth',
+        age:55}
+    ]
 };
 let books3 = {
     title:'2010 Odyssey Two',
     pageCount:297,
     genre:'Science fiction and fantasy',
-    authors :{
-        name : 'Arthur C Clarke',
-        age: 90,
-    }
+    authors :[
+        {name : 'Arthur C Clarke',
+        age: 90}
+    ]
 };
 console.log(books,books2,books3);
 // - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
 
-let users =[
+let users = [
     {name:'Artem', username:'ART', password:'qwerty'},
     {name:'Vasya', username:'Vas', password:'qazwsx'},
     {name:'Tolik', username:'Tolya', password:'242155'},
@@ -63,8 +63,20 @@ let users =[
     {name:'Oleg', username:'olek', password:'ggggik'},
     {name:'Masha', username:'Mashka2024', password:'showw'},
     {name:'Kolya', username:'Kolyan', password:'kolaaaan234'}
-];
-console.log(users)
+]
+console.log(users[0].password);
+console.log(users[1].password);
+console.log(users[2].password);
+console.log(users[3].password);
+console.log(users[4].password);
+console.log(users[5].password);
+console.log(users[6].password);
+console.log(users[7].password);
+console.log(users[8].password);
+console.log(users[9].password);
+console.log(users[10].password);
+console.log(users[11].password);
+
 
 
 // - описати масив, в якому буде зберігатись інформація про температуру вранці, вдень і ввечері за термін в 7 днів. Як зробити цей масив - вам потрібно подумати. Нормальних варіантів опису - 2. Варіант, коли в вас буде одновимірний масив з 21 значенням вичключаємо одразу
@@ -92,15 +104,15 @@ else {console.log('Невірно')}
 // (в першу, другу, третю или четверту частину години).
 
 let t =prompt('enter number for 0 fo 59');
-if(t<=15){
+if(t>0){
     console.log('firstTime');
-}else if(t<=30){
+}else if(t>=15){
     console.log('twoTime');
-}else if(t<=45){
+}else if(t>30){
     console.log('threeTime');
-}else if(t<=59){
+}else if(t>45){
     console.log('fourTime');
-}else {
+}else if (t>59){
     console.log(false)
 }
 
@@ -108,13 +120,13 @@ if(t<=15){
 // - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
 
 let day = prompt('enter number for 1 fo 31');
-if(day<=10){
+if(day>0){
     console.log('first');
-}else if(day<=20){
+}else if(day>10){
     console.log('two');
-}else if (day<=31){
+}else if (day>20){
     console.log('three');
-}else {
+}else if(day>31){
     console.log(false);
 }
 
@@ -155,7 +167,7 @@ switch (days) {
 let xx= prompt('');
 if(xx===''){
     console.log('false');
-}else if(xx===0){
+}else if(xx==='0'){
     console.log('false');
 }else if(xx===null){
     console.log('false');
@@ -167,24 +179,23 @@ if(xx===''){
 
 
 // - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
-let coursesAndDurationArray =prompt();
-    // [
-    // {title: 'JavaScript Complex', monthDuration: 5},
-    // {title: 'Java Complex', monthDuration: 6},
-    // {title: 'Python Complex', monthDuration: 6},
-    // {title: 'QA Complex', monthDuration: 4},
-    // {title: 'FullStack', monthDuration: 7},
-    // {title: 'Frontend', monthDuration: 4}]
-if(coursesAndDurationArray ==='JavaScript Complex') {
-    console.log('????')
-}else if (coursesAndDurationArray ==='JavaComplex'){
+
+let coursesAndDurationArray =[
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}]
+if(coursesAndDurationArray[0]){
+    console.log('??????')
+}else if (coursesAndDurationArray[1]){
     console.log('Супер')
-}else if (coursesAndDurationArray==='Python Complex'){
+}else if (coursesAndDurationArray[2]){
     console.log('Супер')
-}else if(coursesAndDurationArray==='QA Complex'){
-    console.log('????')
-}else if(coursesAndDurationArray==='FullStack'){
+}else if(coursesAndDurationArray[3]){
+    console.log('???????')
+}else if(coursesAndDurationArray[4]){
     console.log('Супер')
-}else if (coursesAndDurationArray==='Frontend'){
-    console.log('????')
-}
+}else if (coursesAndDurationArray[5]){
+    console.log('??????')}
