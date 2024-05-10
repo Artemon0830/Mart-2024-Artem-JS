@@ -1,0 +1,11 @@
+.grid{
+    height: 100%;
+    display: grid;
+    grid-template-rows:20vh 20vh 20vh 20vh 20vh ;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw ;
+}
+.wrap{
+    border: solid 1px black;
+}
+.post-card{
+}

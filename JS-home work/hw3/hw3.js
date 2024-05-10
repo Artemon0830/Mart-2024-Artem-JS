@@ -98,7 +98,7 @@ for (const user of users) {
         console.log(`${user.status}-${user.name};`)
     }
 }
-for (let user of users) {
+for (const user of users) {
     if (user.age >= 30) {
         console.log(`${user.name}-->${user.age}`)
     }
