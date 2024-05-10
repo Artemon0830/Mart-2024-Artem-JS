@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54181083-9148-461b-a5a2-27ebba47ca34" name="Changes" comment="commit,hw 3">
-      <change afterPath="$PROJECT_DIR$/JS-home work/hw3/additional3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS-home work/hw3/additional3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS-home work/hw3/additional3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS-home work/hw4/hw4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS-home work/hw4/hw4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS-home work/hw3/hw3.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS-home work/hw3/hw3.js" afterDir="false" />
-    </list>
+    <list default="true" id="54181083-9148-461b-a5a2-27ebba47ca34" name="Changes" comment="commit,hw 4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,6 +79,7 @@
       <workItem from="1715161203673" duration="2744000" />
       <workItem from="1715240728206" duration="9475000" />
       <workItem from="1715322805159" duration="10389000" />
+      <workItem from="1715348817909" duration="55000" />
     </task>
     <task id="LOCAL-00001" summary="first commit,hw 1">
       <option name="closed" value="true" />
@@ -128,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715153922145</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit,hw 4">
+      <option name="closed" value="true" />
+      <created>1715348840854</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715348840854</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +150,7 @@
     <MESSAGE value="first commit,hw 1" />
     <MESSAGE value="commit,hw 2" />
     <MESSAGE value="commit,hw 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit,hw 3" />
+    <MESSAGE value="commit,hw 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit,hw 4" />
   </component>
 </project>
