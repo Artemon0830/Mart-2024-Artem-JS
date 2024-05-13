@@ -1,66 +1,57 @@
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
-function areaRectangle(a,b){
-let result = a * b;
-return result;
+let areaRectangle= function (a,b){
+    return a * b;
 }
-let res1=areaRectangle(10,15);
-console.log(res1);
+console.log(areaRectangle(5,10))
 
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
 let p =3.14
 function areaCircle(r){
-  let result = p * (r*2);
-    return result;
+    return  p * (r*2);
 }
-let res2=areaCircle(2)
-console.log(res2)
+console.log(areaCircle(7))
+
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
-function areaCylinder(r,h){
-    let result = 2*p*r*h;
-    return result;
+let areaCylinder=(r,h)=>{
+    return 2*p*r*h;
 }
-let res3 = areaCylinder(5,6) 
-console.log(res3);
+console.log(areaCylinder(5,7))
+
 // - створити функцію яка приймає масив та виводить кожен його елемент
 let arrOne=[1,3,4,5,6,false,true,'good day'];
-function arr(array){
+let arr=function(array){
     for (const item of array){
         console.log(item)
     }
+    return array;
 }
-arr(arrOne);
+console.log(arr(arrOne))
+
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
-function article(text){
+let article=(text)=>{
     document.write(`<p>${text}</p>`)
+    return text
 }
-article('hello')
+article('vagetable')
 
 // // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
-function fn(text){
+let fn=function(text){
     document.write(`<ul>
                     <li>${text}</li>
                     <li>${text}</li>
                     <li>${text}</li>
                     </ul>`)
 }
-fn('okey')
+fn('room')
 
-// - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл
-function f(text,number,quantity) {
-     
+// / - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл
+let f=(text,number,quantity)=> {
     for (let i = 0; i <number; i++) {
         document.write(`<${quantity}> ${text} ${number} </${quantity}>`)
     }
 }
-f('red',3, 'li');
-// - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+f('milk',3, 'li');
 
-function array(number,string,boolean){
-    document.write(`${number} '${string}' ${boolean}`)
-}
-array(5,'helllooo',false)
-
-// - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 let arrayUser= [
     {id:2, name: 'vasya', age: 31},
     {id:3,name: 'petya', age: 30},
@@ -74,35 +65,32 @@ let arrayUser= [
     {id:7,name: 'olya', age: 31},
     {id:8,name: 'max', age: 31}
 ];
-function f1(arrU) {
+let f1=function (arrU) {
     for (const arrUElement of arrU) {
-        document.write(`${arrUElement.id} ${arrUElement.name} ${arrUElement.age}`)
+        document.write(`${arrUElement.id}-${arrUElement.name}-${arrUElement.age};`)
     }
+    return f1
 }
 f1(arrayUser)
 
-
-//
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
 
 let arrSwap=[11,22,33,44];
-function swap(arr,index1,index2){
+ swap=(arr,index1,index2)=>{
     let index =arr[index1];
     arr[index1]=arr[index2];
     arr[index2]=index;
-return arr;
+    return arr;
 }
-
 console.log(swap(arrSwap,1,0))
-
 
 
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 let USD =[{currency:'USD',value:40}];
 let EUR=[{currency:'EUR',value:42}];
-function exchange(sumUAH,currencyValues,exchangeCurrency) {
+let exchange=(sumUAH,currencyValues,exchangeCurrency)=> {
     for (const index of currencyValues) {
         if (USD.currency === exchangeCurrency) {
             return sumUAH / USD.value
@@ -111,9 +99,4 @@ function exchange(sumUAH,currencyValues,exchangeCurrency) {
     }
     return sumUAH / exchangeCurrency;
 }
-
-console.log(exchange(10000,EUR,42))
-
-
-
-
+console.log(exchange(10000,EUR,40))
