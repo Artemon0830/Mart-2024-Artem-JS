@@ -60,7 +60,7 @@ let descending=nums.sort(function (a, b){
 console.log(descending)
 
 // - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
- 
+
 let array = [10,8,-7,55,987,-1011,0,1050,0];
 let mapO = array.map(value =>  value.toString());
 console.log(mapO)
@@ -76,7 +76,7 @@ console.log(mapO)
 //     {title: 'FullStack', monthDuration: 7},
 //     {title: 'Frontend', monthDuration: 4}
 // ];
-// -- відсортувати його за спаданням за monthDuration
+// -- відсоати ртувйого за спаданням за monthDuration
 // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
 // -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
 // */
@@ -89,10 +89,10 @@ let coursesAndDurationArray = [
     {title: 'FullStack', monthDuration: 7},
     {title: 'Frontend', monthDuration: 4}
 ];
-console.log(coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration));
+console.log('Сортування за спаданням за monthDuration', coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration));
 
-console.log(coursesAndDurationArray.filter((item) => item.monthDuration > 5))
-console.log(coursesAndDurationArray.map((index) => {
+console.log(' відфільтрування , залишивши тільки курси з тривалістю більше 5 місяців', coursesAndDurationArray.filter((item) => item.monthDuration > 5))
+console.log('допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}',coursesAndDurationArray.map((index) => {
     return {
         id: coursesAndDurationArray.indexOf(index),
         title: index.title,
@@ -138,24 +138,24 @@ let cards= cardSuit.reduce((acc, card) =>{
     })
     return acc;
 },[])
-console.log(cards);
+console.log('колода карт',cards);
 // - туз піка
-console.log(cards.find((card) => card.cardSuit === 'ace'))
+console.log('туз піка',cards.find((card) => card.cardSuit === 'ace'))
  // - всі шістки
-console.log(cards.filter((card) => card.cardSuit === '6'));
+console.log('всі шістки',cards.filter((card) => card.cardSuit === '6'));
 // - всі червоні карти
-console.log(cards.filter((card) => card.color === 'red'));
+console.log('всі червоні карти',cards.filter((card) => card.color === 'red'));
 // - всі буби
-console.log(cards.filter((card) => card.value === 'diamond'));
+console.log('всі буби',cards.filter((card) => card.value === 'diamond'));
 // - всі трефи від 9 та більше
-console.log(cards.filter((card) => card.value === 'clubs' && card.cardSuit.length > 1 ));
+console.log( 'всі трефи від 9 та більше', cards.filter((card) => card.value === 'clubs' && values.indexOf(card.cardSuit)>=3));
 // Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
-// // {
-// //     spades:[],
-// //         diamonds:[],
-// //     hearts:[],
-// //     clubs:[]
-// // }
+// {
+//     spades:[],
+//         diamonds:[],
+//     hearts:[],
+//     clubs:[]
+// }
  const callback=function (acc,card){
      if(card.value==='spade'){
          acc[0].push(card)
@@ -169,7 +169,7 @@ console.log(cards.filter((card) => card.value === 'clubs' && card.cardSuit.lengt
      return acc;
  }
  let reduse=cards.reduce(callback,[[],[],[],[]]);
-console.log(reduse)
+console.log('упакувати всі карти по "мастях" в обєкт', reduse)
 
 // взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
 // --написати пошук всіх об'єктів, в який в modules є sass
@@ -275,6 +275,7 @@ const coursesArray = [
 ];
 // --написати пошук всіх об'єктів, в який в modules є sass
 
-console.log(coursesArray.filter((item) => item.modules==="sass"))
+console.log("об'єкти, в який в modules є sass", coursesArray.filter((item) => item.modules.includes("sass")));
+
 // --написати пошук всіх об'єктів, в який в modules є docker
-console.log(coursesArray.filter(item => item.modules === "docker"));
+console.log("об'єкти, в який в modules є docker", coursesArray.filter(item => item.modules.includes("docker")));
