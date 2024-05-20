@@ -185,12 +185,13 @@ class Prince {
         this.shoe = shoe;
     }
 }
-let prince= new Prince('Artem',22,1);
+let prince= new Prince('Artem',22,39);
 for (let i = 0; i < Cinderellas.length; i++) {
-    if (Cinderellas.footSize === prince.shoe) {
-        console.log('Попелюшка', Cinderellas);
+    if (Cinderellas[i].footSize === prince.shoe) {
+        console.log('Попелюшка', Cinderellas[i]);
     }
 }
 
 console.log(Cinderellas.find((random) => random.footSize === prince.shoe));
+
 
