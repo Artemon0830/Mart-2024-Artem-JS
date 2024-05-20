@@ -19,7 +19,7 @@ console.log(areaCylinder(5,7))
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
 let arrOne=[1,3,4,5,6,false,true,'good day'];
-let arr=function(array){
+let arr=(array)=>{
     for (const item of array){
         console.log(item)
     }
@@ -35,7 +35,7 @@ let article=(text)=>{
 article('vagetable')
 
 // // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
-let fn=function(text){
+ let fn=(text)=>{
     document.write(`<ul>
                     <li>${text}</li>
                     <li>${text}</li>
@@ -90,13 +90,11 @@ console.log(swap(arrSwap,1,0))
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 let USD =[{currency:'USD',value:40}];
 let EUR=[{currency:'EUR',value:42}];
-let exchange=(sumUAH,currencyValues,exchangeCurrency)=> {
+let exchange = (sumUAH,currencyValues,exchangeCurrency) => {
     for (const index of currencyValues) {
-        if (USD.currency === exchangeCurrency) {
-            return sumUAH / USD.value
-        } else if (EUR.currency === exchangeCurrency)
-            return sumUAH / EUR.value
+        if (index.currency === exchangeCurrency) {
+            return sumUAH / index.value
+        }
     }
-    return sumUAH / exchangeCurrency;
 }
-console.log(exchange(10000,EUR,40))
+console.log(exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD'))

@@ -54,9 +54,12 @@ clients.push(new Client(9, 'Yuliia', 'Yulya', 'Yuliia.@gmail.com', '25554456521'
 clients.push(new Client(10, 'Semen', 'Sioma', 'Semen.@gmail.com', '87644456521',['fruit','vegetable','pepsi','cola']));
 console.log('Масив з клыэнтами',clients)
 
+ 
 // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
-// console.log(clients.sort((order1, order2) => order1.order - order2.order));
-// -------я цього не знаю завдання-----
+console.log('order по зростанню', clients.sort((client1,client2) => client2.order.length-client1.order.length))
+//  clients.sort((client1, client2) => client1.order.localeCompare(client2.order));
+// console.log(clients)   
+
 
 
 
