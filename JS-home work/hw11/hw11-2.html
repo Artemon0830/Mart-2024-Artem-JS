@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+<div class="recipes"></div>
+<script>
+    
+    // - взяти https://dummyjson.com/docs/recipes та вивести інформацію про всі рецепти.
+    // Інгредієнти повинні бути список під час відображення.
+    let blockRecipes = document.getElementsByClassName('recipes')[0];
+    fetch('https://dummyjson.com/recipes')
+    .then(value => value.json())
+    .then(({recipes})=>{
+        console.log(recipes)
+        let divElementContainer = document.createElement('div');
+        for (const recipe of recipes ){
+            console.log(recipe)
+            let divDescription=document.createElement('div')
+            let h1 = document.createElement('h1');
+            h1.innerText=`${recipe.name}(${recipe.cuisine})`
+            divDescription.appendChild(h1)
+            divElementContainer.append(divDescription)
+            let img = document.createElement('img');
+            img.src=recipe.image;
+            divDescription.appendChild(img)
+            let p = document.createElement('p');
+            p.innerText ='Ingredients:'
+            let ul = document.createElement('ul');
+            for (const ingredient of recipe.ingredients) {
+                let li = document.createElement('li');
+                li.innerText = ingredient;
+                ul.appendChild(li);
+            }
+            divDescription.append(p,ul);
+            let pOne = document.createElement('p');
+            pOne.innerText ='Instruction:'
+            let ulOne = document.createElement('ul');
+            for (const instruction of recipe.instructions) {
+                let liOne=document.createElement('li')
+                liOne.innerText=instruction;
+                ulOne.appendChild(liOne)
+            }
+            divDescription.append(pOne,ulOne)
+            
+            let other1 = document.createElement('h4');
+            other1.innerText=`Cook time:${recipe.cookTimeMinutes} minutes`
+            let other2 = document.createElement('h4');
+            other2.innerText=`Calories:${recipe.caloriesPerServing}`
+            let other3 = document.createElement('h4');
+            other3.innerText=`Difficulty:${recipe.difficulty}`
+            divDescription.append(other1,other2,other3)
+        }
+        blockRecipes.appendChild(divElementContainer)
+    })
+</script>
+</body>
+</html>
