@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+*{
+    margin: 10px;
+}
+body{
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.users{
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.usersIndex{
+    width:45vw ;
+    height:18vh ;
+    background-color: lawngreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.usersIndex>a{
+    text-decoration: none;
+    color:#FF0000;
+}
+.userDetails{
+    width:100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+button{
+    margin-top: 100px;
+    width: 250px;
+    height: 60px;
+    background-color: yellow;
+    border-radius: 10px;
+    font-size:20px ;
+
+}
+.title{
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+.title>a{
+    text-decoration: none;
+    color: brown;
+}
+#postUser{
+    width:100vw;
+    height: 60vh;
+    background-color: whitesmoke;
+    border-radius: 10px;
+
+}
+.commentContainer{
+    width: 100vw;
+    height: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
