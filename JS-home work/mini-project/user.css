@@ -49,11 +49,17 @@ button{
     font-size:20px ;
 
 }
-.title{
-    width: 100vw;
-    height: 5vh;
+/* user-details.html styles */
+.titleStyle {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.title{
+    width: 15vw;
+    height: 10vh;
+    display: flex;
+    justify-content:space-evenly;
     align-items: center;
     flex-direction: column;
     background-color: whitesmoke;
@@ -65,19 +71,24 @@ button{
 }
 #postUser{
     width:100vw;
-    height: 60vh;
+    height: 50vh;
     background-color: whitesmoke;
     border-radius: 10px;
 
 }
+.divComments{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .commentContainer{
-    width: 100vw;
-    height: 40vw;
+    width: 23vw;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    background-color: whitesmoke;
-    border-radius: 10px;
 }
 

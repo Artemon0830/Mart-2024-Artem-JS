@@ -28,6 +28,8 @@
     let postCommentsButton = document.createElement('button');
     postCommentsButton.innerText='Comments';
     postUserContainer.appendChild(postCommentsButton);
+    let divComments = document.createElement('div');
+    divComments.className='divComments'
     postCommentsButton.addEventListener("click", ()=> {
         fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
             .then(value => value.json())
@@ -40,8 +42,9 @@
                         let commentUser = document.createElement('p');
                         commentUser.innerText = `${key}:${comment[key]}`;
                         commentContainer.appendChild(commentUser);
+                        divComments.appendChild(commentContainer)
                     }
-                   postUserBlock.appendChild(commentContainer);
+                   postUserBlock.appendChild(divComments);
                 })
 
 
