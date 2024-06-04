@@ -5,7 +5,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
     .then(users => {
         console.log(users)
         for (let user of users) {
-            let divElement = document.createElement('div')[0];
+            let divElement = document.createElement('div');
             divElement.className='usersIndex'
             let idNameUser = document.createElement('h3');
             idNameUser.innerText=`id:${user['id']} ;  name:${user['name']}`;
